@@ -1,0 +1,187 @@
+:root {
+    --main: #006184;
+    --dark: #1F293D;
+    --dark-accent: #53838F ;
+    --light: #FFFFFF;
+    --light-accent: #4CB5CD;
+}
+
+.main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    background-color: #FFFFFF;
+
+
+}
+
+.hero {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+    
+    width: 100%;
+    height: 36rem;
+
+    background-image: url('../../../assets/christ_teaching_nephites.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--main);
+
+    border-bottom: 1px solid black;
+}
+
+.hero-text-container {
+    margin-left: 6rem;
+    margin-bottom: 4rem;
+    
+    width: auto;
+    height: auto;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.hero-title {
+    color: var(--light);
+    font-size: 40px;
+    margin-bottom: 0;
+}
+
+.hero-sub {
+    color: var(--light);
+    font-size: 20px;
+    margin: 0;
+}
+
+.sections {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+
+    width: 100%;
+    height: 32rem;
+
+    background-color: var(--light);
+}
+
+.who-is-jc {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+
+    background-image: url('../../../assets/calling_the_fishermen.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--main);
+
+    width: 20rem;
+    height: 24rem;
+    margin-top: 3rem;
+
+    background-size: 150%;
+    transition: all 1s ease-in-out;
+}
+
+.what-has-jc{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+
+    background-image: url('../../../assets/jesus_praying_in_gethsemane.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--main);
+    
+    width: 20rem;
+    height: 24rem;
+    margin-top: 3rem;
+
+    background-size: 150%;
+    transition: all 1s ease-in-out;
+}
+
+.what-is-jc{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+
+    background-image: url('../../../assets/jesus_blessing_the_children.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--main);
+
+    width: 20rem;
+    height: 24rem;
+    margin-top: 3rem;
+
+    background-size: 150%;
+    transition: all 1s ease-in-out;
+}
+
+.what-is-jc:hover {
+    background-size: 175%;
+}
+
+.what-has-jc:hover {
+    background-size: 175%;
+}
+
+.who-is-jc:hover {
+    background-size: 175%;
+}
+
+.section-button{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+
+    border: none;
+    background-color: var(--main);
+    color: var(--light);
+
+    width: 100%;
+    height: 20%;
+}
+
+.introduction {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    background-color: var(--main);
+
+    width: 100%;
+    height: 32rem;
+}
+
+.intro-title {
+    color: var(--light);
+
+    margin-top: 6rem;
+    margin-left: 6rem;
+
+    font-size: 40px;
+}
+
+.intro-paragraph {
+    color: var(--light);
+
+    margin-left: 6rem;
+
+    font-size: 18px;
+
+    width: 85%;
+}
+
