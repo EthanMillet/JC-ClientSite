@@ -5,15 +5,15 @@ import './pages/styles/nav.css'
 
 function DropdownMenu() {
     return(
-        <div>
-     <div className="dropdown-menu">
-      <ul>
-        <li>Menu 1</li>
-        <li>Menu 2</li>
-        <li>Menu 3</li>
-      </ul>
-    </div>
+      <div>
+        <div className="dropdown-menu">
+          <ul>
+            <li>Find a Church &rarr;</li>
+            <li>Meet With Missionaries &rarr;</li>
+            <li>Study the Book of Mormon &rarr;</li>
+          </ul>
         </div>
+      </div>
     )
 }
 

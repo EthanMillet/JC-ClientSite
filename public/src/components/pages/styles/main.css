@@ -12,38 +12,36 @@
     justify-content: flex-start;
     background-color: #FFFFFF;
 
-
+    width: 100%;
+    height: auto;
 }
 
 .hero {
     display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-end;
-    align-items: flex-start;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-end;
     
     width: 100%;
     height: 36rem;
 
     background-image: url('../../../assets/christ_teaching_nephites.webp');
-    background-position: center;
+    background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: var(--main);
-
-    border-bottom: 1px solid black;
 }
 
 .hero-text-container {
-    margin-left: 6rem;
-    margin-bottom: 4rem;
-    
-    width: auto;
+    width: 80%;
     height: auto;
 
     display: flex;
     flex-flow: column wrap;
     justify-content: flex-end;
     align-items: flex-start;
+
+    margin-bottom: 6rem;
 }
 
 .hero-title {
@@ -80,7 +78,7 @@
     background-size: cover;
     background-color: var(--main);
 
-    width: 20rem;
+    width: 24rem;
     height: 24rem;
     margin-top: 3rem;
 
@@ -99,7 +97,7 @@
     background-size: cover;
     background-color: var(--main);
     
-    width: 20rem;
+    width: 24rem;
     height: 24rem;
     margin-top: 3rem;
 
@@ -118,7 +116,7 @@
     background-size: cover;
     background-color: var(--main);
 
-    width: 20rem;
+    width: 24rem;
     height: 24rem;
     margin-top: 3rem;
 
@@ -128,14 +126,17 @@
 
 .what-is-jc:hover {
     background-size: 175%;
+    cursor: pointer;
 }
 
 .what-has-jc:hover {
     background-size: 175%;
+    cursor: pointer;
 }
 
 .who-is-jc:hover {
     background-size: 175%;
+    cursor: pointer;
 }
 
 .section-button{
@@ -144,7 +145,7 @@
     align-items: center;
     justify-content: center;
 
-    font-size: 18px;
+    font-size: 20px;
 
     border: none;
     background-color: var(--main);
@@ -154,11 +155,15 @@
     height: 20%;
 }
 
+.section-button:hover {
+    cursor: pointer;
+}
+
 .introduction {
     display: flex;
-    flex-flow: column wrap;
-    align-items: flex-start;
-    justify-content: flex-start;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
 
     background-color: var(--main);
 
@@ -166,22 +171,25 @@
     height: 32rem;
 }
 
+.intro-container {
+    width: 80%;
+    height: auto;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
 .intro-title {
     color: var(--light);
-
-    margin-top: 6rem;
-    margin-left: 6rem;
-
     font-size: 40px;
 }
 
 .intro-paragraph {
     color: var(--light);
-
-    margin-left: 6rem;
-
-    font-size: 18px;
-
-    width: 85%;
+    width: 100%;
+    font-size: 20px;
 }
 
