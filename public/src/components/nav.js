@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { Outlet, Link } from "react-router-dom";
 import './pages/styles/nav.css'
 
 
@@ -8,9 +8,9 @@ function DropdownMenu() {
       <div>
         <div className="dropdown-menu">
           <ul>
-            <li>Find a Church &rarr;</li>
-            <li>Meet With Missionaries &rarr;</li>
-            <li>Study the Book of Mormon &rarr;</li>
+            <li className="dropdownItem"><a target="_blank" rel="noopener noreferrer" href="https://www.churchofjesuschrist.org/welcome/find-a-church?lang=eng">Find a Church &rarr;</a></li>
+            <li className="dropdownItem"><a target="_blank" rel="noopener noreferrer" href="https://www.churchofjesuschrist.org/comeuntochrist/lp/basic-beliefs/meet-with-missionaries?lang=eng">Meet With Missionaries &rarr;</a></li>
+            <li className="dropdownItem"><a target="_blank" rel="noopener noreferrer" href="https://www.churchofjesuschrist.org/comeuntochrist/lp/basic-beliefs/book-of-mormon?lang=eng">Study the Book of Mormon &rarr;</a></li>
           </ul>
         </div>
       </div>
@@ -30,11 +30,13 @@ function Nav() {
 
     return (
       <div className="navbar-main">
+        
         <div className="navbar-left">
-            <button className="navbar-logo">Logo</button>
-            <button className="navbar-link">HOME</button>
-            <button className="navbar-link">ABOUT</button>
-            <button className="navbar-link">CONTACT</button>
+
+            <div className="navbar-logo"></div>
+            <Link to='/' className="navbar-link">HOME</Link>
+            <Link to='/' className="navbar-link">ABOUT</Link>
+            <Link to='/' className="navbar-link">CONTACT</Link>
 
 
             <div

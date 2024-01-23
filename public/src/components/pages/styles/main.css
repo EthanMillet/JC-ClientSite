@@ -1,9 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+
 :root {
     --main: #006184;
     --dark: #1F293D;
     --dark-accent: #53838F ;
     --light: #FFFFFF;
     --light-accent: #4CB5CD;
+    
+    --display: "Cinzel", serif;
+    --text: "PT Sans", sans-serif;
 }
 
 .main {
@@ -48,12 +55,16 @@
     color: var(--light);
     font-size: 40px;
     margin-bottom: 0;
+
+    font-family: var(--display);
 }
 
 .hero-sub {
     color: var(--light);
     font-size: 20px;
     margin: 0;
+
+    font-family: var(--display);
 }
 
 .sections {
@@ -65,6 +76,7 @@
     height: 32rem;
 
     background-color: var(--light);
+    
 }
 
 .who-is-jc {
@@ -84,6 +96,7 @@
 
     background-size: 150%;
     transition: all 1s ease-in-out;
+    
 }
 
 .what-has-jc{
@@ -165,7 +178,7 @@
     justify-content: center;
     align-items: center;
 
-    background-color: var(--main);
+    background-color: var(--light);
 
     width: 100%;
     height: 32rem;
@@ -173,23 +186,427 @@
 
 .intro-container {
     width: 80%;
-    height: auto;
+    height: 28rem;
+
+    background-color: var(--main);
 
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 
+    border-radius: 2rem;
+}
+
+.intro-sub {
+    width: 85%;
+    height: auto;
+
+    background-color: var(--main);
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .intro-title {
     color: var(--light);
     font-size: 40px;
+    font-family: var(--display);
 }
 
 .intro-paragraph {
     color: var(--light);
     width: 100%;
-    font-size: 20px;
+    font-size: 24px;
 }
 
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+
+.hero {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-end;
+    
+    width: 100%;
+    height: 36rem;
+
+    background-image: url('../../../assets/christ_teaching_nephites.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--main);
+}
+
+.hero-text-container {
+    width: 90%;
+    height: auto;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    margin-bottom: 6rem;
+}
+
+.hero-title {
+    font-size: 22px;
+}
+
+.hero-sub {
+    font-size: 14px;
+}
+
+.sections {
+    height: auto;
+}
+
+.introduction {
+    height: auto;
+
+}
+
+.intro-container {
+    height: auto;
+    width: 100%;
+    border-radius: 0;
+
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    
+}
+
+.intro-paragraph {
+    font-size: 16px;
+}
+
+}
+
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .hero {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: flex-end;
+        
+        width: 100%;
+        height: 36rem;
+    
+        background-image: url('../../../assets/christ_teaching_nephites.webp');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: var(--main);
+    }
+    
+    .hero-text-container {
+        width: 90%;
+        height: auto;
+    
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: flex-end;
+        align-items: flex-start;
+    
+        margin-bottom: 6rem;
+    }
+    
+    .hero-title {
+        font-size: 22px;
+    }
+    
+    .hero-sub {
+        font-size: 14px;
+    }
+    
+    .sections {
+        height: auto;
+    }
+    
+    .introduction {
+        height: auto;
+    
+    }
+    
+    .intro-container {
+        height: auto;
+        width: 100%;
+        border-radius: 0;
+    
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    
+        
+    }
+    
+    .intro-paragraph {
+        font-size: 16px;
+    }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+    .hero {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: flex-end;
+        
+        width: 100%;
+        height: 36rem;
+    
+        background-image: url('../../../assets/christ_teaching_nephites.webp');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: var(--main);
+    }
+    
+    .hero-text-container {
+        width: 90%;
+        height: auto;
+    
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: flex-end;
+        align-items: flex-start;
+    
+        margin-bottom: 6rem;
+    }
+    
+    .hero-title {
+        font-size: 32px;
+    }
+    
+    .hero-sub {
+        font-size: 22px;
+    }
+    
+    .sections {
+        height: auto;
+    }
+
+    .who-is-jc {
+        width: 90%;
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .what-has-jc {
+        width: 90%;
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .what-is-jc {
+        width: 90%;
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .introduction {
+        height: auto;
+    
+    }
+    
+    .intro-container {
+        height: auto;
+        width: 100%;
+        border-radius: 0;
+    
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    
+        
+    }
+    
+    .intro-paragraph {
+        font-size: 28px;
+    }
+
+}
+
+@media only screen and (min-width: 980px) and (max-width: 1023px) {
+    .hero {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: flex-end;
+        
+        width: 100%;
+        height: 36rem;
+    
+        background-image: url('../../../assets/christ_teaching_nephites.webp');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: var(--main);
+    }
+    
+    .hero-text-container {
+        width: 90%;
+        height: auto;
+    
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: flex-end;
+        align-items: flex-start;
+    
+        margin-bottom: 6rem;
+    }
+    
+    .hero-title {
+        font-size: 32px;
+    }
+    
+    .hero-sub {
+        font-size: 22px;
+    }
+    
+    .sections {
+        height: auto;
+    }
+
+    .who-is-jc {
+        width: 90%;
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .what-has-jc {
+        width: 90%;
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .what-is-jc {
+        width: 90%;
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .introduction {
+        height: auto;
+    
+    }
+    
+    .intro-container {
+        height: auto;
+        width: 100%;
+        border-radius: 0;
+    
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    
+        
+    }
+    
+    .intro-paragraph {
+        font-size: 28px;
+    }
+    }
+
+    @media only screen and (min-width: 1024px) and (max-width: 1199px) {
+
+        .hero {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: flex-end;
+            
+            width: 100%;
+            height: 36rem;
+        
+            background-image: url('../../../assets/christ_teaching_nephites.webp');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: var(--main);
+        }
+        
+        .hero-text-container {
+            width: 90%;
+            height: auto;
+        
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: flex-end;
+            align-items: flex-start;
+        
+            margin-bottom: 6rem;
+        }
+        
+        .hero-title {
+            font-size: 32px;
+        }
+        
+        .hero-sub {
+            font-size: 22px;
+        }
+        
+        .sections {
+            height: auto;
+        }
+    
+        .who-is-jc {
+            width: 90%;
+    
+            background-position: 25% 35%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    
+        .what-has-jc {
+            width: 90%;
+    
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    
+        .what-is-jc {
+            width: 90%;
+    
+            background-position: 25% 35%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .introduction {
+            height: auto;
+        
+        }
+        
+        .intro-container {
+            height: auto;
+            width: 100%;
+            border-radius: 0;
+        
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        
+            
+        }
+        
+        .intro-paragraph {
+            font-size: 28px;
+        }
+        
+        }

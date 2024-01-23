@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import './index.css';
 import Main from './components/pages/main';
+import Contact from './components/pages/contact'
 import Nav from './components/nav'
 import Footer from './components/footer';
 import reportWebVitals from './reportWebVitals';
@@ -13,6 +14,11 @@ root.render(
  <Nav></Nav>
   <Routes>
     <Route path='/' element={<Main/>}/>
+    <Route path='/contact' element={<Contact/>}/>
+    <Route
+                        path="*"
+                        element={<Navigate to="/" />}
+                    />
   </Routes>
   <Footer></Footer>
  </BrowserRouter>

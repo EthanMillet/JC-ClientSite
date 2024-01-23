@@ -1,9 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+
 :root {
     --main: #006184;
     --dark: #1F293D;
     --dark-accent: #53838F ;
     --light: #FFFFFF;
     --light-accent: #4CB5CD;
+
+    --display: "Cinzel", serif;
+    --text: "PT Sans", sans-serif;
+}
+
+* {
+    font-family: var(--text)
+
 }
 
 .navbar-main {
@@ -13,7 +25,7 @@
 
     background-color: var(--light);
     width: 100%;
-    height: 3rem;
+    height: 4.5rem;
 }
 
 .navbar-left {
@@ -25,11 +37,22 @@
 }
 
 .navbar-link {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
     background-color: var(--light);
     border: none;
 
     width: 5rem;
     transition: all linear 0.15s;
+
+    color: black;
+    text-decoration: none;
+
+    font-family: var(--text);
+    font-size: 14px;
 }
 
 .navbar-link:hover {
@@ -39,8 +62,13 @@
 }
 
 .navbar-dropdown {   
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+
     width: 4rem;
-    height: 3rem;
+    height: 4.5rem;
+    font-size: 14px;
 
     }
 
@@ -59,11 +87,19 @@
 }
 
 .navbar-logo {  
-    background-color: var(--light);
+    background-image: url('../../../assets/JoyInChrist.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--main);
+
     border: none;
     width: 4rem;
     }
 
+.navbar-logo:hover {
+    cursor: pointer;
+}
 
 
 ul {
@@ -90,6 +126,24 @@ li:hover {
     width: 12rem;
   }
   
+  .dropdownItem a {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 12rem;
+    height: 100%;
+    color: black;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+  .dropdownItem a:hover {
+    color: white;
+}
+
+
   .navbar-right {
     display: flex;
     flex-flow: row wrap;
@@ -102,7 +156,7 @@ li:hover {
 .navbar-button {
     border: none;
     background-color: var(--main);
-    border-radius: 4rem;
+    border-radius: 2rem;
 
     width: 8rem;
     height: 2rem;
@@ -118,3 +172,133 @@ li:hover {
     background-color: var(--dark);
     cursor: pointer;
 }
+
+
+.footer-main {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--dark);
+    width: 100%;
+    height: auto;
+}
+
+.footer-title-container {
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 10rem;
+
+    font-size: 24px;
+    font-family: var(--display);
+}
+
+.footer-title {
+    font-size: 32px;
+    font-family: var(--display);
+    color: var(--light);
+}
+
+.footer-sub {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 60%;
+    height: 24rem;
+}
+
+.footer-subtitle {
+    border-bottom: 1px var(--light) solid;
+    width: 100%;
+}
+
+.footer-left {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    width: 12rem;
+    color: var(--light);
+}
+
+.footer-middle {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    width: 12rem;
+    color: var(--light);
+}
+
+.footer-right {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    width: 12rem;
+    color: var(--light);
+}
+
+.footer-button {
+    background-color: var(--dark);
+    border: none;
+
+    width: auto;
+    transition: all linear 0.15s;
+
+    padding-bottom: 4px;
+    color: var(--light);
+}
+
+.footer-button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.footer-copyright {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+    font-family: var(--text);
+
+    color: var(--light);
+
+    font-size: 8px;
+}
+
+
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+
+
+    
+    }
+
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+
+
+    }
+
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+
+    
+    }
+
+@media only screen and (min-width: 1024px) and (max-width: 1199px) {
+
+        
+    }
