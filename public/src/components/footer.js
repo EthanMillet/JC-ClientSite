@@ -33,7 +33,6 @@ function Footer() {
 
         <div className="footer-right">
             <p className="footer-subtitle">About Us</p>
-            <button className="footer-button">Home</button>
             <button className="footer-button">About</button>
             <button className="footer-button">Contact</button>
             <button className="footer-button">Who is Jesus Christ</button>
@@ -43,8 +42,8 @@ function Footer() {
         </div>
 
         <div className="footer-copyright">
-          <h2>Acessibility Support</h2>
-          <h2>&#169; Joy In Christ. All rights reserved.</h2>
+          <h2 className="footer-access">Acessibility Support</h2>
+          <h2 className="footer-copyright">&#169; Joy In Christ. All rights reserved.</h2>
         </div>
       </div>
     );

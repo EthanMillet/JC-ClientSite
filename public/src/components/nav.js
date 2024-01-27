@@ -1,64 +1,45 @@
 import React, { useState } from "react";
 import { Outlet, Link } from "react-router-dom";
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+
 import './pages/styles/nav.css'
 
-
-function DropdownMenu() {
-    return(
-      <div>
-        <div className="dropdown-menu">
-          <ul>
-            <li className="dropdownItem"><a target="_blank" rel="noopener noreferrer" href="https://www.churchofjesuschrist.org/welcome/find-a-church?lang=eng">Find a Church &rarr;</a></li>
-            <li className="dropdownItem"><a target="_blank" rel="noopener noreferrer" href="https://www.churchofjesuschrist.org/comeuntochrist/lp/basic-beliefs/meet-with-missionaries?lang=eng">Meet With Missionaries &rarr;</a></li>
-            <li className="dropdownItem"><a target="_blank" rel="noopener noreferrer" href="https://www.churchofjesuschrist.org/comeuntochrist/lp/basic-beliefs/book-of-mormon?lang=eng">Study the Book of Mormon &rarr;</a></li>
-          </ul>
-        </div>
-      </div>
-    )
-}
-
-function Nav() {
-    const [isDropdownVisible, setDropdownVisible] = useState(false);
-
-    const handleMouseEnter = () => {
-      setDropdownVisible(true);
-    };
-  
-    const handleMouseLeave = () => {
-      setDropdownVisible(false);
-    };
+function NavBar() {
 
     return (
-      <div className="navbar-main">
-        
-        <div className="navbar-left">
-
-            <div className="navbar-logo"></div>
-            <Link to='/' className="navbar-link">HOME</Link>
-            <Link to='/' className="navbar-link">ABOUT</Link>
-            <Link to='/' className="navbar-link">CONTACT</Link>
 
 
-            <div
-          className="navbar-dropdown"
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          style={{zIndex: 999}}
-        >
-          <button className="navbar-drop-button">LINKS</button>
-          {/* <DropdownMenu /> */}
-          {isDropdownVisible && <DropdownMenu />}
-        </div>
+            <Navbar expand="lg" className="bg-body-tertiary">
+      <Container fluid>
+        <Navbar.Brand href="/">Joy In Christ</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="/" className="navButton">HOME</Nav.Link>
+            <Nav.Link href="/" className="navButton">ABOUT</Nav.Link>
+            <Nav.Link href="/" className="navButton">CONTACT</Nav.Link>
+            <NavDropdown title="RESOURCES" id="basic-nav-dropdown">
+              
+              <NavDropdown.Item className="navButton" href="https://www.churchofjesuschrist.org/?lang=eng">Latter Day Saints</NavDropdown.Item>
+              <NavDropdown.Item className="navButton" href="https://www.churchofjesuschrist.org/welcome/find-a-church?lang=eng">Find a Church</NavDropdown.Item>
+              <NavDropdown.Item className="navButton" href="https://www.churchofjesuschrist.org/comeuntochrist/lp/basic-beliefs/meet-with-missionaries?lang=eng">
+              Meet With Missionaries
+              </NavDropdown.Item>
+              <NavDropdown.Item className="navButton" href="https://www.churchofjesuschrist.org/comeuntochrist/lp/basic-beliefs/book-of-mormon?lang=eng">Get a Book of Mormon</NavDropdown.Item>
+            
+            </NavDropdown>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+       
 
-
-        </div>
-
-        <div className="navbar-right">
-            <button className="navbar-button">Learn More</button>
-        </div>
-      </div>
     );
 }
 
   
-  export default Nav;
+  export default NavBar;
