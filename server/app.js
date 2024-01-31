@@ -9,12 +9,12 @@ app.use(cors());
 require("dotenv").config();
 
 let transporter = nodemailer.createTransport({
-    host: "smtp.example.com",
-    port: 587,
-    secure: false, // upgrade later with STARTTLS
+    host: "smtppro.zoho.com",
+    port: 465,
+    secure: true,
     auth: {
-      user: "username",
-      pass: "password",
+      user: process.env.EMAIL,
+      pass: process.env.EMAIL_PASSWORD,
     },
   });
 
@@ -24,18 +24,16 @@ let transporter = nodemailer.createTransport({
       : console.log(`=== Server is ready to take messages: ${success} ===`);
    });
    
-   app.post('/send', function (req, res) {
+   app.post("/send", function (req, res) {
     let mailOptions = {
-        from: `${req.body.mailerState.email}`,
-        to: process.env.EMAIL,
-        subject: `Message from: ${req.body.mailerState.email}`,
-        text: `${req.body.mailerState.message}`,
-        
-    }
-   })
-
-   transporter.sendMail(mailOptions, function (err, data) {
-    if (err) {
+      from: process.env.EMAIL,
+      to: process.env.EMAIL,
+      subject: `Message from: ${req.body.mailerState.email}`,
+      text: `${req.body.mailerState.message}`,
+    };
+   
+    transporter.sendMail(mailOptions, function (err, data) {
+      if (err) {
         res.json({
           status: "fail",
         });
@@ -45,9 +43,10 @@ let transporter = nodemailer.createTransport({
           status: "success",
         });
       }
+    });
    });
-
-const port = 3001;
-app.listen(port, () => {
- console.log(`Server is running on port: ${port}`);
-});
+   
+   const port = 3001;
+   app.listen(port, () => {
+    console.log(`Server is running on port: ${port}`);
+   });

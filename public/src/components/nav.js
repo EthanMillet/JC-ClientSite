@@ -20,8 +20,17 @@ function NavBar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/" className="navButton">HOME</Nav.Link>
-            <Nav.Link href="/" className="navButton">ABOUT</Nav.Link>
-            <Nav.Link href="/" className="navButton">CONTACT</Nav.Link>
+            <Nav.Link href="/about" className="navButton">ABOUT</Nav.Link>
+            <Nav.Link href="/contact" className="navButton">CONTACT</Nav.Link>
+            
+            <NavDropdown title="KNOW THE SAVIOR" id="basic-nav-dropdown">
+              
+              <NavDropdown.Item className="navButton" href="https://www.churchofjesuschrist.org/?lang=eng">Who Is Jesus Christ</NavDropdown.Item>
+              <NavDropdown.Item className="navButton" href="https://www.churchofjesuschrist.org/welcome/find-a-church?lang=eng">What Has Jesus Christ Done</NavDropdown.Item>
+              <NavDropdown.Item className="navButton" href="https://www.churchofjesuschrist.org/comeuntochrist/lp/basic-beliefs/meet-with-missionaries?lang=eng"> What Is The Doctrine of Jesus Christ </NavDropdown.Item>
+            
+            </NavDropdown>            
+            
             <NavDropdown title="RESOURCES" id="basic-nav-dropdown">
               
               <NavDropdown.Item className="navButton" href="https://www.churchofjesuschrist.org/?lang=eng">Latter Day Saints</NavDropdown.Item>
@@ -32,6 +41,8 @@ function NavBar() {
               <NavDropdown.Item className="navButton" href="https://www.churchofjesuschrist.org/comeuntochrist/lp/basic-beliefs/book-of-mormon?lang=eng">Get a Book of Mormon</NavDropdown.Item>
             
             </NavDropdown>
+
+
           </Nav>
         </Navbar.Collapse>
       </Container>

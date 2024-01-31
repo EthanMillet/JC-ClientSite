@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import './index.css';
 import Main from './components/pages/main';
 import Contact from './components/pages/contact'
+import About from './components/pages/about'
 import Nav from './components/nav'
 import Footer from './components/footer';
 import reportWebVitals from './reportWebVitals';
@@ -15,10 +16,8 @@ root.render(
   <Routes>
     <Route path='/' element={<Main/>}/>
     <Route path='/contact' element={<Contact/>}/>
-    <Route
-                        path="*"
-                        element={<Navigate to="/" />}
-                    />
+    <Route path='/about' element={<About/>}/>
+    <Route path="*" element={<Navigate to="/" />}/>
   </Routes>
   <Footer></Footer>
  </BrowserRouter>
