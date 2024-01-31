@@ -10,6 +10,18 @@ app.use(cors());
 
 require("dotenv").config();
 
+
+app.use('/images', express.static(path.join(__dirname, '../client/images')));
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '../client/build')));
+}
+
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
+
 let transporter = nodemailer.createTransport({
     host: "smtppro.zoho.com",
     port: 465,
@@ -48,7 +60,6 @@ let transporter = nodemailer.createTransport({
     });
    });
    
-   const port = 3001;
    app.listen(PORT, () => {
     console.log(`Server is running on port: ${PORT}`);
    });
