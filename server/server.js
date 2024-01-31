@@ -1,15 +1,16 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
-const app = express();
-const cors = require("cors");
 const path = require('path');
+require("dotenv").config();
 const PORT = process.env.PORT || 3001;
 
+const app = express();
+const cors = require("cors");
+
+
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cors());
-
-require("dotenv").config();
-
 
 app.use('/images', express.static(path.join(__dirname, '../public/images')));
 
