@@ -1,10 +1,13 @@
 const express = require("express");
+const { ApolloServer } = require('apollo-server-express');
 const nodemailer = require("nodemailer");
 const path = require('path');
+const { authMiddleware } = require('./utils/auth.js');
 require("dotenv").config();
 const PORT = process.env.PORT || 3001;
 
 const app = express();
+
 const cors = require("cors");
 
 
@@ -61,6 +64,10 @@ let transporter = nodemailer.createTransport({
     });
    });
    
+
+
    app.listen(PORT, () => {
     console.log(`Server is running on port: ${PORT}`);
    });
+
+

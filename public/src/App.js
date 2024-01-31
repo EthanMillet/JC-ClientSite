@@ -9,7 +9,6 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
-import './index.css';
 import Main from './components/pages/main';
 import Contact from './components/pages/contact'
 import About from './components/pages/about'
@@ -38,16 +37,21 @@ const client = new ApolloClient({
 function App() {
     return (
  <ApolloProvider client={client}>
+ 
  <Nav/>
+ 
   <Routes>
+
     <Route path='/' element={<Main/>}></Route>
     <Route path='/contact' element={<Contact/>}></Route>
     <Route path='/about' element={<About/>}></Route>
 
   </Routes>
+  
   <Footer/>
+ 
  </ApolloProvider>
-    )
-    };
+    );
+    }
 
 export default App;
