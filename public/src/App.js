@@ -15,6 +15,9 @@ import About from './components/pages/about'
 import Nav from './components/nav'
 import Footer from './components/footer';
 
+import Content from './components/pages/content'
+
+
 const httpLink = createHttpLink({
   uri: process.env.herokuLink || 'http://localhost:3001/graphql',
 });
@@ -45,6 +48,8 @@ function App() {
     <Route path='/' element={<Main/>}></Route>
     <Route path='/contact' element={<Contact/>}></Route>
     <Route path='/about' element={<About/>}></Route>
+    <Route path='/content' element={<Content/>}></Route>
+
 
   </Routes>
   

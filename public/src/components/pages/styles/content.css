@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+
+:root {
+    --main: #006184;
+    --dark: #1F293D;
+    --dark-accent: #53838F ;
+    --light: #FFFFFF;
+    --light-accent: #4CB5CD;
+    
+    --display: "Cinzel", serif;
+    --text: "PT Sans", sans-serif;
+}
+
+.Content-Introduction {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--light);
+
+    width: 100%;
+    height: 36rem;
+}
+
+.Content-intro-container {
+    width: 80%;
+    height: 32rem;
+
+    background-color: var(--main);
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 2rem;
+}
+
+.Content-intro-sub {
+    width: 85%;
+    height: auto;
+
+    background-color: var(--main);
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.Content-intro-title {
+    color: var(--light);
+    font-size: 40px;
+    font-family: var(--display);
+}
+
+.Content-intro-paragraph {
+    color: var(--light);
+    width: 100%;
+    font-size: 24px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+.Content-Introduction {
+    height: auto;
+
+}
+
+.Content-intro-container {
+    height: auto;
+    width: 100%;
+    border-radius: 0;
+
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    
+}
+
+.Content-intro-paragraph {
+    font-size: 16px;
+}
+
+}
+
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {   
+    .Content-Introduction {
+        height: auto;
+    
+    }
+    
+    .Content-intro-container {
+        height: auto;
+        width: 100%;
+        border-radius: 0;
+    
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    
+        
+    }
+    
+    .Content-intro-paragraph {
+        font-size: 16px;
+    }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 979px) { 
+    .Content-Introduction {
+        height: auto;
+    
+    }
+    
+    .Content-intro-container {
+        height: auto;
+        width: 100%;
+        border-radius: 0;
+    
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    
+        
+    }
+    
+    .Content-intro-paragraph {
+        font-size: 28px;
+    }
+
+}
+
+@media only screen and (min-width: 980px) and (max-width: 1023px) {   
+    .Content-Introduction {
+        height: auto;
+    
+    }
+    
+    .Content-intro-container {
+        height: auto;
+        width: 100%;
+        border-radius: 0;
+    
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    
+        
+    }
+    
+    .Content-intro-paragraph {
+        font-size: 28px;
+    }
+    }
+
+    @media only screen and (min-width: 1024px) and (max-width: 1199px) { 
+        .Content-Introduction {
+            height: auto;
+        
+        }
+        
+        .Content-intro-container {
+            height: auto;
+            width: 100%;
+            border-radius: 0;
+        
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        
+            
+        }
+        
+        .Content-intro-paragraph {
+            font-size: 28px;
+        }
+        
+        }

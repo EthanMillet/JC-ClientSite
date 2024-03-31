@@ -10,6 +10,12 @@ import './pages/styles/nav.css'
 
 function NavBar() {
 
+    const themes = {
+      theme1 : "theme1",
+      theme2 : "theme2",
+      theme3 : "theme3"
+    }
+
     return (
 
 
@@ -25,9 +31,9 @@ function NavBar() {
             
             <NavDropdown title="KNOW THE SAVIOR" id="basic-nav-dropdown">
               
-              <NavDropdown.Item className="navButton" href="https://www.churchofjesuschrist.org/?lang=eng">Who Is Jesus Christ</NavDropdown.Item>
-              <NavDropdown.Item className="navButton" href="https://www.churchofjesuschrist.org/welcome/find-a-church?lang=eng">What Has Jesus Christ Done</NavDropdown.Item>
-              <NavDropdown.Item className="navButton" href="https://www.churchofjesuschrist.org/comeuntochrist/lp/basic-beliefs/meet-with-missionaries?lang=eng"> What Is The Doctrine of Jesus Christ </NavDropdown.Item>
+              <Link className="navButton" to="/content" state={{from: themes.theme1}}>Who Is Jesus Christ</Link>
+              <Link className="navButton" to="/content" state={{from: themes.theme2}}>What Has Jesus Christ Done</Link>
+              <Link className="navButton"to="/content" state={{from: themes.theme3}}>What Is The Doctrine of Jesus Christ</Link> 
             
             </NavDropdown>            
             
