@@ -2,17 +2,26 @@ import React from 'react';
 import { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { useQuery } from '@apollo/client';
-
+import { GET_USER } from '../../utils/queries';
 import { Link, useLocation } from 'react-router-dom';
 import './styles/content.css'
+import ContentInfo from './contentInfo'
 
 function Content() {
 
     const location = useLocation()
+    const { loading, error, data } = useQuery(GET_USER, {
+        variables:{ _id: "66087d796c2dafd0cc133906"}
+    });
+    
+    if (loading) return "Loading..."
+    if (error) return `Error! ${error.message}`
+
     console.log(location)
     const { from } = location.state
 
     console.log(from)
+    console.log(data)
     // const { loading, error, data } = useQuery(GET_USER);
     // if (loading) return "Loading..."
     // if (error) return `Error! ${error.message}`
@@ -94,20 +103,7 @@ function Content() {
                         <h2>Quote</h2>
                     </div>
                     <div>
-                        {/* 
-                        {data.user.binders.map((binders) => (
-                            <div key={binders._id} className='conceptBlock'>
-                                <p className='concept'></p>
-                                
-                                {data.user.binders.map((binders) => (
-                                    <div key={} className="">
-                                        <p className='book'></p>
-                                        <p className='quote'></p>
-                                    </div>
-                                ))}
-
-                            </div>
-                        ))} */} 
+                        <ContentInfo user={data}></ContentInfo>
 
                     </div> 
 
